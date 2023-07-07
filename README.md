@@ -5,9 +5,9 @@ Made some code for running ONT analysis with Docker.
 FROM nanopore:0.3
 
 COPY nanopore.sh /opt/
-RUN chmod +x /opt/nanopore.sh
+RUN chmod +x /opt/run_ont.py
 
-ENTRYPOINT ["bash", "/opt/nanopore.sh"]
+ENTRYPOINT ["bin/puthon", "/opt/run_ont.py"]
 
 ### Run docker image example
 docker run \
